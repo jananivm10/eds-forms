@@ -4014,6 +4014,35 @@
     ]
   },
   {
+    "id": "range",
+    "fields": [
+      {
+        "component": "container",
+        "name": "basic",
+        "label": "Basic",
+        "collapsible": false,
+        "...": "../../../../models/form-common/_basic-input-fields.json"
+      },
+      {
+        "...": "../../../../models/form-common/_help-container.json"
+      },
+      {
+        "component": "container",
+        "name": "validation",
+        "label": "Validation",
+        "collapsible": true,
+        "...": "../../../../models/form-common/_number-validation-fields.json"
+      },
+      {
+        "component": "number",
+        "name": "stepValue",
+        "label": "Step Value",
+        "valueType": "number",
+        "description": "Step value for the range"
+      }
+    ]
+  },
+  {
     "id": "tnc",
     "fields": [
       {

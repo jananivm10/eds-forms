@@ -181,14 +181,7 @@
         "name": "thankYouMessage",
         "label": "Message Content",
         "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "thankYouOption"
-            },
-            "message"
-          ]
-        }
+        "condition": { "==": [{ "var": "thankYouOption" }, "message"] }
       },
       {
         "component": "select",
@@ -205,49 +198,28 @@
             "value": "fd/af/components/guidesubmittype/email"
           }
         ],
-        "value": ""
+        "value" : ""
       },
       {
         "component": "boolean",
         "name": "enableRestEndpointPost",
         "label": "Enable POST request",
         "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/restendpoint"
-          ]
-        }
+        "condition": { "==": [{ "var": "actionType" }, "fd/af/components/guidesubmittype/restendpoint"] }
       },
       {
         "component": "text",
         "name": "restEndpointPostUrl",
         "label": "URL For POST request",
         "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/restendpoint"
-          ]
-        }
+        "condition": { "==": [{ "var": "actionType" }, "fd/af/components/guidesubmittype/restendpoint"] }
       },
       {
         "component": "container",
         "name": "email",
         "label": "Email Configuration",
         "collapsible": false,
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/email"
-          ]
-        },
+        "condition": { "==": [{ "var": "actionType" }, "fd/af/components/guidesubmittype/email"] },
         "fields": [
           {
             "component": "text",
@@ -294,28 +266,14 @@
             "name": "templatePath",
             "label": "External template path",
             "valueType": "string",
-            "condition": {
-              "==": [
-                {
-                  "var": "useExternalEmailTemplate"
-                },
-                true
-              ]
-            }
+            "condition": { "==": [{ "var": "useExternalEmailTemplate" }, true] }
           },
           {
             "component": "richtext",
             "name": "template",
             "label": "Email template",
             "valueType": "string",
-            "condition": {
-              "!=": [
-                {
-                  "var": "useExternalEmailTemplate"
-                },
-                true
-              ]
-            }
+            "condition": { "!=": [{ "var": "useExternalEmailTemplate" }, true] }
           },
           {
             "component": "boolean",
